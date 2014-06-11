@@ -1,0 +1,45 @@
+﻿<UserControl x:Class="Kinectanban.Views.CardView"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             mc:Ignorable="d" 
+             d:DesignHeight="800" d:DesignWidth="1000">
+    <Grid d:DataContext="{d:DesignData Source=/SampleData/SampleCardModel.xaml}">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="0.5*"/>
+            <ColumnDefinition />
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="150"></RowDefinition>
+            <RowDefinition ></RowDefinition>
+        </Grid.RowDefinitions>
+        <TextBlock Grid.Column="0" Grid.Row="0" Text="{Binding Path=Id}" Style="{StaticResource TextBlockHeader}"/>
+        <TextBlock Grid.Column="1" Grid.Row="0"  Text="{Binding Path=Title}" Style="{StaticResource TextBlockHeader}" />
+        <StackPanel Grid.Column="0" Grid.Row="1" Orientation="Vertical">
+            <StackPanel Orientation="Horizontal">
+                <TextBlock Text="Assigned To: " />
+                <TextBlock Text="{Binding Path=AssignedTo}" TextTrimming="CharacterEllipsis"/>
+            </StackPanel>
+            <ItemsControl ItemsSource="{Binding ImportantAttributes}">
+                <ItemsControl.ItemsPanel>
+                    <ItemsPanelTemplate>
+                        <StackPanel Orientation="Vertical"/>
+                    </ItemsPanelTemplate>
+                </ItemsControl.ItemsPanel>
+                <ItemsControl.ItemTemplate>
+                    <DataTemplate>
+                        <StackPanel Orientation="Horizontal">
+                            <TextBlock Text="{Binding Name}" Style="{StaticResource {x:Type TextBlock}}"/>
+                            <TextBlock Text=": " Style="{StaticResource {x:Type TextBlock}}"/>
+                            <TextBlock Text="{Binding Value}" Style="{StaticResource {x:Type TextBlock}}"/>
+                        </StackPanel>
+                    </DataTemplate>
+                </ItemsControl.ItemTemplate>
+            </ItemsControl>
+        </StackPanel>
+        <StackPanel Grid.Column="1" Grid.Row="1" Orientation="Vertical">
+            <TextBlock Text="{Binding Path=Detail}" TextWrapping="WrapWithOverflow"/>
+        </StackPanel>
+    </Grid>
+</UserControl>

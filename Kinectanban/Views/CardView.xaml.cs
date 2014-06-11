@@ -13,14 +13,14 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 
-namespace Kinectaban
+namespace Kinectanban.Views
 {
     /// <summary>
-    /// Interaction logic for MainWindow.xaml
+    /// Interaction logic for CardView.xaml
     /// </summary>
-    public partial class MainWindow : Window
+    public partial class CardView : UserControl
     {
-        public MainWindow()
+        public CardView()
         {
             InitializeComponent();
         }

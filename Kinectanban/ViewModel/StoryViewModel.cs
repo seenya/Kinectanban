@@ -4,10 +4,11 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Kinectaban.ViewModel
+namespace Kinectanban.ViewModel
 {
-    public class StoryWallViewModel : ViewModelBase
+    public class StoryViewModel : ViewModelBase
     {
+        private Kinectanban.Model.CardModel model;
 
     }
 }

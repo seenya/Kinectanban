@@ -7,11 +7,11 @@ using System.Windows;
 // General Information about an assembly is controlled through the following 
 // set of attributes. Change these attribute values to modify the information
 // associated with an assembly.
-[assembly: AssemblyTitle("Kinectaban")]
+[assembly: AssemblyTitle("Kinectanban")]
 [assembly: AssemblyDescription("")]
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("TOWER Australia Limited")]
-[assembly: AssemblyProduct("Kinectaban")]
+[assembly: AssemblyProduct("Kinectanban")]
 [assembly: AssemblyCopyright("Copyright © TOWER Australia Limited 2014")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
