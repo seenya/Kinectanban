@@ -8,6 +8,6 @@ namespace Kinectanban.ViewModel
 {
     public class WallListViewModel : ViewModelBase
     {
-
+        public IList<string> Walls { get; set; }
     }
 }

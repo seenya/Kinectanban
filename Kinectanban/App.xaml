@@ -27,5 +27,9 @@
         <Style TargetType="Button">
             <Setter Property="Background" Value="Transparent" />
         </Style>
+
+        <Style TargetType="ListBox">
+            <Setter Property="Background" Value="Transparent" />
+        </Style>
     </Application.Resources>
 </Application>
