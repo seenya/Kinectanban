@@ -4,11 +4,10 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Kinectanban.ViewModel
+namespace Kinectanban.Services.Wrappers
 {
-    public class StoryViewModel : ViewModelBase
+    public interface IResourceSupplier
     {
-        private Kinectanban.Model.CardModel model;
-
+        object FindResource(string key);
     }
 }

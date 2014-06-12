@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Kinectanban.ViewModel
 {
-    public class StoryWallViewModel : ViewModelBase
+    public class WallListViewModel : ViewModelBase
     {
 
     }

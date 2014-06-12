@@ -34,19 +34,17 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="PresentationCore" />
+    <Reference Include="PresentationFramework" />
     <Reference Include="System" />
     <Reference Include="System.Data" />
+    <Reference Include="System.Xaml" />
     <Reference Include="System.Xml" />
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
-    <Reference Include="System.Xaml">
-      <RequiredTargetFramework>4.0</RequiredTargetFramework>
-    </Reference>
     <Reference Include="WindowsBase" />
-    <Reference Include="PresentationCore" />
-    <Reference Include="PresentationFramework" />
   </ItemGroup>
   <ItemGroup>
     <ApplicationDefinition Include="App.xaml">
@@ -56,11 +54,24 @@
     <Compile Include="Model\CardModel.cs" />
     <Compile Include="Model\CustomAttributeModel.cs" />
     <Compile Include="Model\referencemodels.cs" />
-    <Compile Include="ViewModel\StoryViewModel.cs" />
-    <Compile Include="ViewModel\StoryWallViewModel.cs" />
+    <Compile Include="Model\WallModel.cs" />
+    <Compile Include="Services\Constants.cs" />
+    <Compile Include="Services\IResourceService.cs" />
+    <Compile Include="Services\ResourceService.cs" />
+    <Compile Include="Services\Wrappers\IResourceSupplier.cs" />
+    <Compile Include="Services\Wrappers\ResourceSupplier.cs" />
+    <Compile Include="ViewModel\CardViewModel.cs" />
+    <Compile Include="ViewModel\WallListViewModel.cs" />
+    <Compile Include="ViewModel\WallViewModel.cs" />
     <Compile Include="ViewModel\ViewModelBase.cs" />
     <Compile Include="Views\CardView.xaml.cs">
       <DependentUpon>CardView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\WallListView.xaml.cs">
+      <DependentUpon>WallListView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\WallView.xaml.cs">
+      <DependentUpon>WallView.xaml</DependentUpon>
     </Compile>
     <Page Include="MainWindow.xaml">
       <Generator>MSBuild:Compile</Generator>
@@ -74,10 +85,21 @@
       <DependentUpon>MainWindow.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
-    <DesignData Include="SampleData\SampleCardModel.xaml">
+    <DesignData Include="SampleData\SampleCardViewModel.xaml">
+      <SubType>Designer</SubType>
+    </DesignData>
+    <DesignData Include="SampleData\SampleWallListViewModel.xaml">
       <SubType>Designer</SubType>
     </DesignData>
     <Page Include="Views\CardView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\WallListView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\WallView.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

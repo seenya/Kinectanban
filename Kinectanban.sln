@@ -7,6 +7,15 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Kinectanban", "Kinectanban\
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Kinectanban.WebAPI", "Kinectanban.WebAPI\Kinectanban.WebAPI.csproj", "{1FBE3CEB-9BEA-4CB2-BAF6-01539B70721D}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Kinectanban.Tests", "Kinectanban.Tests\Kinectanban.Tests.csproj", "{237FCB53-F694-4023-BA0D-B49F6F3C5408}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = ".nuget", ".nuget", "{E309AF88-E522-418B-A3EF-F15C2504C413}"
+	ProjectSection(SolutionItems) = preProject
+		.nuget\NuGet.Config = .nuget\NuGet.Config
+		.nuget\NuGet.exe = .nuget\NuGet.exe
+		.nuget\NuGet.targets = .nuget\NuGet.targets
+	EndProjectSection
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +30,10 @@ Global
 		{1FBE3CEB-9BEA-4CB2-BAF6-01539B70721D}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{1FBE3CEB-9BEA-4CB2-BAF6-01539B70721D}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{1FBE3CEB-9BEA-4CB2-BAF6-01539B70721D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{237FCB53-F694-4023-BA0D-B49F6F3C5408}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{237FCB53-F694-4023-BA0D-B49F6F3C5408}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{237FCB53-F694-4023-BA0D-B49F6F3C5408}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{237FCB53-F694-4023-BA0D-B49F6F3C5408}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
