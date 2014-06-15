@@ -1,4 +1,5 @@
-﻿using Kinectanban.ViewModel;
+﻿using Kinectanban.Service;
+using Kinectanban.ViewModel;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -6,15 +7,15 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Input;
 
-namespace Kinectanban.Commands
+namespace Kinectanban.Command
 {
     public class BackCommand : ICommand
     {
-         private readonly MainWindowViewModel _vm;
+        private readonly INavigationService _navigationService;
 
-         public BackCommand(MainWindowViewModel vm)
+        public BackCommand(INavigationService navigationService)
         {
-            _vm = vm;
+            _navigationService = navigationService;
         }
 
         public bool CanExecute(object parameter)
@@ -30,7 +31,7 @@ namespace Kinectanban.Commands
 
         public void Execute(object parameter)
         {
-            _vm.Back();
+            _navigationService.GoBack();
         }
     }
 }

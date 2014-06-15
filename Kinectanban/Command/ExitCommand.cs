@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Input;
 
-namespace Kinectanban.Commands
+namespace Kinectanban.Command
 {
     public class ExitCommand : ICommand
 {

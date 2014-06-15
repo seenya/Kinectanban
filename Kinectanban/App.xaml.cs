@@ -1,4 +1,4 @@
-﻿using Kinectanban.Commands;
+﻿using Kinectanban.Command;
 using Kinectanban.ViewModel;
 using Microsoft.Practices.Unity;
 using System;
@@ -29,11 +29,12 @@ namespace Kinectanban
                    WithName.Default,
                    WithLifetime.ContainerControlled);
 
-
                 MainWindowViewModel mainWindowViewModel = container.Resolve<MainWindowViewModel>();
 
-                CommandList.BackCommand = container.Resolve<BackCommand>(new ParameterOverride("vm", mainWindowViewModel));
+                CommandList.BackCommand = container.Resolve<BackCommand>();
                 CommandList.ExitCommand = container.Resolve<ExitCommand>();
+                CommandList.SelectCardCommand = container.Resolve<SelectCardCommand>();
+                CommandList.SelectWallCommand = container.Resolve<SelectWallCommand>();
 
 
                 MainWindow mainWindow = container.Resolve<MainWindow>(new ParameterOverride("vm", mainWindowViewModel));

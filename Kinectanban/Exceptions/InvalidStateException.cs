@@ -4,10 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Kinectanban.Services.Wrappers
+namespace Kinectanban.Exceptions
 {
-    public interface IResourceSupplier
+    public class InvalidStateException : Exception
     {
-        object FindResource(string key);
     }
 }

@@ -13,7 +13,7 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 
-namespace Kinectanban.Views
+namespace Kinectanban.View
 {
     /// <summary>
     /// Interaction logic for WallView.xaml

@@ -1,5 +1,4 @@
-﻿using Kinectanban.ViewModel;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -14,22 +13,16 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 
-namespace Kinectanban.Views
+namespace Kinectanban.View
 {
     /// <summary>
-    /// Interaction logic for CardView.xaml
+    /// Interaction logic for WallListView.xaml
     /// </summary>
-    public partial class CardView : UserControl
+    public partial class WallListView : UserControl
     {
-
-        public CardView()
+        public WallListView()
         {
             InitializeComponent();
-        }
-
-        public CardView(CardViewModel viewModel)
-        {
-            DataContext = viewModel;
         }
     }
 }

@@ -6,8 +6,8 @@ using System.Threading.Tasks;
 
 namespace Kinectanban.ViewModel
 {
-    public class MainWindowViewModel : IMainWindowViewModel
+    public interface IMainWindowViewModel
     {
-        public ViewModelBase SelectedData { get; set; }
+        ViewModelBase SelectedData { get; set; }
     }
 }

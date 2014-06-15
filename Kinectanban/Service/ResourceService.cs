@@ -1,5 +1,5 @@
 ﻿using Kinectanban.Model;
-using Kinectanban.Services.Wrappers;
+using Kinectanban.Service.Wrapper;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Media;
 
-namespace Kinectanban.Services
+namespace Kinectanban.Service
 {
     public class ResourceService : IResourceService
     {

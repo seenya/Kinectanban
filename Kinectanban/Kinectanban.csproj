@@ -72,30 +72,38 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
-    <Compile Include="Commands\BackCommand.cs" />
-    <Compile Include="Commands\CommandList.cs" />
-    <Compile Include="Commands\ExitCommand.cs" />
+    <Compile Include="Command\BackCommand.cs" />
+    <Compile Include="Command\CommandList.cs" />
+    <Compile Include="Command\ExitCommand.cs" />
+    <Compile Include="Command\SelectCardCommand.cs" />
+    <Compile Include="Command\SelectWallCommand.cs" />
+    <Compile Include="Exceptions\InvalidStateException.cs" />
     <Compile Include="Model\CardModel.cs" />
     <Compile Include="Model\CustomAttributeModel.cs" />
     <Compile Include="Model\referencemodels.cs" />
     <Compile Include="Model\WallModel.cs" />
-    <Compile Include="Services\Constants.cs" />
-    <Compile Include="Services\IResourceService.cs" />
-    <Compile Include="Services\ResourceService.cs" />
-    <Compile Include="Services\Wrappers\IResourceSupplier.cs" />
-    <Compile Include="Services\Wrappers\ResourceSupplier.cs" />
+    <Compile Include="Service\Constants.cs" />
+    <Compile Include="Service\INavigationService.cs" />
+    <Compile Include="Service\IResourceService.cs" />
+    <Compile Include="Service\IWallService.cs" />
+    <Compile Include="Service\NavigationService.cs" />
+    <Compile Include="Service\ResourceService.cs" />
+    <Compile Include="Service\WallService.cs" />
+    <Compile Include="Service\Wrapper\IResourceSupplier.cs" />
+    <Compile Include="Service\Wrapper\ResourceSupplier.cs" />
     <Compile Include="ViewModel\CardViewModel.cs" />
+    <Compile Include="ViewModel\IMainWindowViewModel.cs" />
     <Compile Include="ViewModel\MainWindowViewModel.cs" />
     <Compile Include="ViewModel\WallListViewModel.cs" />
     <Compile Include="ViewModel\WallViewModel.cs" />
     <Compile Include="ViewModel\ViewModelBase.cs" />
-    <Compile Include="Views\CardView.xaml.cs">
+    <Compile Include="View\CardView.xaml.cs">
       <DependentUpon>CardView.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Views\WallListView.xaml.cs">
+    <Compile Include="View\WallListView.xaml.cs">
       <DependentUpon>WallListView.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Views\WallView.xaml.cs">
+    <Compile Include="View\WallView.xaml.cs">
       <DependentUpon>WallView.xaml</DependentUpon>
     </Compile>
     <Page Include="MainWindow.xaml">
@@ -116,15 +124,15 @@
     <DesignData Include="SampleData\SampleWallListViewModel.xaml">
       <SubType>Designer</SubType>
     </DesignData>
-    <Page Include="Views\CardView.xaml">
+    <Page Include="View\CardView.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="Views\WallListView.xaml">
+    <Page Include="View\WallListView.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="Views\WallView.xaml">
+    <Page Include="View\WallView.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

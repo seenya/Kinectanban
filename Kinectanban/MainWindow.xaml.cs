@@ -21,8 +21,6 @@ namespace Kinectanban
     /// </summary>
     public partial class MainWindow : Window
     {
-        private MainWindowViewModel _viewModel;
-
         protected MainWindow()
         {
             InitializeComponent();
@@ -31,7 +29,7 @@ namespace Kinectanban
         public MainWindow(MainWindowViewModel vm) 
         {
             InitializeComponent();
-            _viewModel = vm;
+            DataContext = vm;
         }
 
     }

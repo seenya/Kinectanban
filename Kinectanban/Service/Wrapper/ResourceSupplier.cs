@@ -5,7 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows;
 
-namespace Kinectanban.Services.Wrappers
+namespace Kinectanban.Service.Wrapper
 {
     public class ResourceSupplier : IResourceSupplier
     {
