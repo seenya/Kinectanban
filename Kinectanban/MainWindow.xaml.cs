@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Kinectanban.ViewModel;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -20,9 +21,18 @@ namespace Kinectanban
     /// </summary>
     public partial class MainWindow : Window
     {
-        public MainWindow()
+        private MainWindowViewModel _viewModel;
+
+        protected MainWindow()
         {
             InitializeComponent();
         }
+
+        public MainWindow(MainWindowViewModel vm) 
+        {
+            InitializeComponent();
+            _viewModel = vm;
+        }
+
     }
 }
