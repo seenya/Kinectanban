@@ -1,4 +1,5 @@
 ﻿using Kinectanban.ViewModel;
+using RestSharp;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -9,10 +10,19 @@ namespace Kinectanban.Service
 {
     public class WallService : IWallService
     {
+        private IRestClient _client;
+
+        public WallService(IRestClient client)
+        {
+            _client = client;
+        }
 
         public WallListViewModel GetWallList()
         {
-            throw new NotImplementedException();
+            var request = new RestRequest("wall", Method.GET);
+            var wallList = _client.Execute<List<string>>(request);
+
+            return new WallListViewModel() { Walls = wallList.Data };
         }
 
         public WallViewModel GetWall(string wallName)

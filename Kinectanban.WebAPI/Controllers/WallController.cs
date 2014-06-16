@@ -11,9 +11,9 @@ namespace Kinectanban.WebAPI.Controllers
     public class WallController : ApiController
     {
 
-        public IEnumerable<string> Get()
+        public IList<string> Get()
         {
-            return new string[] { "Wall1", "Wall2" };
+            return new List<string>() { "Wall1", "Wall2" };
         }
 
         public Wall Get(string id)

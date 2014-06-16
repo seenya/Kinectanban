@@ -1,6 +1,8 @@
 ﻿using Kinectanban.Command;
+using Kinectanban.Service;
 using Kinectanban.ViewModel;
 using Microsoft.Practices.Unity;
+using RestSharp;
 using System;
 using System.Collections.Generic;
 using System.Configuration;
@@ -29,15 +31,19 @@ namespace Kinectanban
                    WithName.Default,
                    WithLifetime.ContainerControlled);
 
-                MainWindowViewModel mainWindowViewModel = container.Resolve<MainWindowViewModel>();
-
+                string wallServiceBaseUri = ConfigurationManager.AppSettings["WallServiceBaseUri"];
+                IRestClient client = container.Resolve<IRestClient>(new ParameterOverride("baseUrl", wallServiceBaseUri));
+                
                 CommandList.BackCommand = container.Resolve<BackCommand>();
                 CommandList.ExitCommand = container.Resolve<ExitCommand>();
                 CommandList.SelectCardCommand = container.Resolve<SelectCardCommand>();
                 CommandList.SelectWallCommand = container.Resolve<SelectWallCommand>();
 
 
-                MainWindow mainWindow = container.Resolve<MainWindow>(new ParameterOverride("vm", mainWindowViewModel));
+                INavigationService navigationService = container.Resolve<INavigationService>();
+                navigationService.Initialise();
+
+                MainWindow mainWindow = container.Resolve<MainWindow>();
                 mainWindow.Show();
             };
 

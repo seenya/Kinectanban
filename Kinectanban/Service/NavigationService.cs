@@ -28,7 +28,7 @@ namespace Kinectanban.Service
             _mainWindowViewModel.SelectedData = GetNewWallListViewModel();
         }
 
-        private ViewModelBase GetNewWallListViewModel()
+        private WallListViewModel GetNewWallListViewModel()
         {
             return _wallService.GetWallList();
         }
