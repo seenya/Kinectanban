@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Kinectanban.ViewModel;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -9,17 +10,17 @@ namespace Kinectanban.Service
     public class WallService : IWallService
     {
 
-        public IList<string> GetWallList()
+        public WallListViewModel GetWallList()
         {
             throw new NotImplementedException();
         }
 
-        public Model.WallModel GetWall(string wallName)
+        public WallViewModel GetWall(string wallName)
         {
             throw new NotImplementedException();
         }
 
-        public Model.CardModel GetCard(string id)
+        public CardViewModel GetCard(string id)
         {
             throw new NotImplementedException();
         }

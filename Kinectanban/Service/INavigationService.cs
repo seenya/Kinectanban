@@ -11,8 +11,7 @@ namespace Kinectanban.Service
     {
         void GoBack();
         void Initialise();
-        void SelectWall(WallViewModel wall);
+        void SelectWall(string wallId);
         void SelectCard(CardViewModel card);
-        void Refresh();
     }
 }

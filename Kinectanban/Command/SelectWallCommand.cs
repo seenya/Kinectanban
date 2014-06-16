@@ -31,8 +31,8 @@ namespace Kinectanban.Command
 
         public void Execute(object parameter)
         {
-            WallViewModel wall = (WallViewModel)parameter;
-            _navigationService.SelectWall(wall);
+            string wallId = (string)parameter;
+            _navigationService.SelectWall(wallId);
         }        
     }
 }

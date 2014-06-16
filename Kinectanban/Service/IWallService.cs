@@ -4,13 +4,14 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using Kinectanban.Model;
+using Kinectanban.ViewModel;
 
 namespace Kinectanban.Service
 {
     public interface IWallService
     {
-        IList<string> GetWallList();
-        WallModel GetWall(string wallName);
-        CardModel GetCard(string id);
+        WallListViewModel GetWallList();
+        WallViewModel GetWall(string wallName);
+        CardViewModel GetCard(string id);
     }
 }
