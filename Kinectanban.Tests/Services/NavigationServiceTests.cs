@@ -176,66 +176,6 @@ namespace Kinectanban.Tests.Services
             service.SelectCard(new CardViewModel());
         }
 
-        //[Test()]
-        //public void Refresh_InitialiseNotCalled_DataSetToWallListViewModel()
-        //{
-        //    IMainWindowViewModel mainViewModel = new MainWindowViewModel();
-        //    mainViewModel.SelectedData = new WallViewModel();
-        //    NavigationService service = CreateTestInstance(mainViewModel);
-
-        //    service.Refresh();
-
-        //    Assert.IsInstanceOf<WallListViewModel>(mainViewModel.SelectedData);
-        //}
-
-        //[Test()]
-        //public void Refresh_WallListViewModelSelected_DataSetToWallListViewModel()
-        //{
-        //    IMainWindowViewModel mainViewModel = new MainWindowViewModel();
-        //    mainViewModel.SelectedData = new WallViewModel();
-        //    NavigationService service = CreateTestInstance(mainViewModel);
-        //    service.Initialise();
-
-        //    var originalData = mainViewModel.SelectedData;
-        //    service.Refresh();
-
-        //    Assert.IsInstanceOf<WallListViewModel>(mainViewModel.SelectedData);
-        //    Assert.AreNotSame(originalData, mainViewModel.SelectedData);
-        //}
-
-        //[Test()]
-        //public void Refresh_WallViewModelSelected_DataSetToWallViewModel()
-        //{
-        //    IMainWindowViewModel mainViewModel = new MainWindowViewModel();
-        //    mainViewModel.SelectedData = new WallViewModel();
-        //    NavigationService service = CreateTestInstance(mainViewModel);
-        //    service.Initialise();
-        //    service.SelectWall("wall1");
-
-        //    var originalData = mainViewModel.SelectedData;
-        //    service.Refresh();
-
-        //    Assert.IsInstanceOf<WallViewModel>(mainViewModel.SelectedData);
-        //    Assert.AreNotSame(originalData, mainViewModel.SelectedData);
-        //}
-
-        //[Test()]
-        //public void Refresh_CardViewModelSelected_DataSetToCardViewModel()
-        //{
-        //    IMainWindowViewModel mainViewModel = new MainWindowViewModel();
-        //    mainViewModel.SelectedData = new WallViewModel();
-        //    NavigationService service = CreateTestInstance(mainViewModel);
-        //    service.Initialise();
-        //    service.SelectWall("wall1");
-        //    service.SelectCard(new CardViewModel());
-
-        //    var originalData = mainViewModel.SelectedData;
-        //    service.Refresh();
-
-        //    Assert.IsInstanceOf<CardViewModel>(mainViewModel.SelectedData);
-        //    Assert.AreNotSame(originalData, mainViewModel.SelectedData);
-        //}
-
         private NavigationService CreateTestInstance(IMainWindowViewModel mainViewModel)
         {
             var mockWallService = new Mock<IWallService>();
