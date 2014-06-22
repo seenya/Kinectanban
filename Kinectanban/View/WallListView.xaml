@@ -19,7 +19,7 @@
             <ListBox.ItemTemplate>
                 <DataTemplate>
                     <Button Margin="10" Padding="10" >
-                        <TextBlock Text="{Binding Path=.}" Style="{StaticResource TextBlockHeader}"/>
+                        <TextBlock Text="{Binding Path=Name}" Style="{StaticResource TextBlockHeader}"/>
                     </Button>
                 </DataTemplate>
             </ListBox.ItemTemplate>

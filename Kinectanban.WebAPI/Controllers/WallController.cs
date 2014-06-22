@@ -1,4 +1,6 @@
 ﻿using Kinectanban.WebAPI.Models;
+using Kinectanban.WebAPI.Models.Trello;
+using Kinectanban.WebAPI.Services;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -10,10 +12,25 @@ namespace Kinectanban.WebAPI.Controllers
 {
     public class WallController : ApiController
     {
+        private ITrelloRepositoryService _wallService;
 
-        public IList<string> Get()
+        public WallController(ITrelloRepositoryService wallService)
         {
-            return new List<string>() { "Wall1", "Wall2" };
+            _wallService = wallService;
+        }
+
+        public IList<WallSummary> Get()
+        {
+            var trelloBoards = _wallService.GetBoards();
+
+            List<WallSummary> walls = new List<WallSummary>();
+            foreach(TrelloBoardSummary board in trelloBoards)
+            {
+                WallSummary summary = new WallSummary() { ID = board.id, Name = board.name };
+                walls.Add(summary);
+            }
+
+            return walls;
         }
 
         public Wall Get(string id)

@@ -1,5 +1,6 @@
 ﻿using Kinectanban.Command;
 using Kinectanban.Exceptions;
+using Kinectanban.Model;
 using Kinectanban.Service;
 using Kinectanban.ViewModel;
 using Moq;
@@ -179,8 +180,8 @@ namespace Kinectanban.Tests.Services
         private NavigationService CreateTestInstance(IMainWindowViewModel mainViewModel)
         {
             var mockWallService = new Mock<IWallService>();
-            var wallList = new List<string>();
-            wallList.Add("Wall1");
+            var wallList = new List<WallSummary>();
+            wallList.Add(new WallSummary() { ID="w1", Name="Wall1" });
             var wallViewModel = new WallListViewModel() { Walls = wallList };
             mockWallService.Setup(x => x.GetWallList()).Returns(wallViewModel);
             mockWallService.Setup(x => x.GetWall(It.IsAny<string>())).Returns(new WallViewModel());

@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Kinectanban.Model;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -8,6 +9,6 @@ namespace Kinectanban.ViewModel
 {
     public class WallListViewModel : ViewModelBase
     {
-        public IList<string> Walls { get; set; }
+        public IList<WallSummary> Walls { get; set; }
     }
 }

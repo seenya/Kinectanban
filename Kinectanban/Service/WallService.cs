@@ -1,4 +1,5 @@
-﻿using Kinectanban.ViewModel;
+﻿using Kinectanban.Model;
+using Kinectanban.ViewModel;
 using RestSharp;
 using System;
 using System.Collections.Generic;
@@ -20,7 +21,7 @@ namespace Kinectanban.Service
         public WallListViewModel GetWallList()
         {
             var request = new RestRequest("wall", Method.GET);
-            var wallList = _client.Execute<List<string>>(request);
+            var wallList = _client.Execute<List<WallSummary>>(request);
 
             return new WallListViewModel() { Walls = wallList.Data };
         }

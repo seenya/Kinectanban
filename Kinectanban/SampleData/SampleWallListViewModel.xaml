@@ -1,16 +1,17 @@
 ﻿<vm:WallListViewModel
     xmlns:vm="clr-namespace:Kinectanban.ViewModel"
+    xmlns:m="clr-namespace:Kinectanban.Model"
     xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib"
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
     xmlns:sys="clr-namespace:System;assembly=mscorlib">
     <vm:WallListViewModel.Walls>
-        <sys:String>Wall 1</sys:String>
-        <sys:String>Wall 2</sys:String>
-        <sys:String>Wall 3 has a ridiculously long description.</sys:String>
-        <sys:String>Wall 4</sys:String>
-        <sys:String>Wall 5</sys:String>
-        <sys:String>Wall 6</sys:String>
-        <sys:String>Wall 7</sys:String>
-        <sys:String>Wall 8</sys:String>
+        <m:WallSummary ID="w1" Name="Wall 1"/>
+        <m:WallSummary ID="w2" Name="Wall 2"/>
+        <m:WallSummary ID="w3" Name="Wall 3 has a ridiculously long description."/>
+        <m:WallSummary ID="w4" Name="Wall 4"/>
+        <m:WallSummary ID="w5" Name="Wall 5"/>
+        <m:WallSummary ID="w6" Name="Wall 6"/>
+        <m:WallSummary ID="w7" Name="Wall 7"/>
+        <m:WallSummary ID="w8" Name="Wall 8"/>
     </vm:WallListViewModel.Walls>
 </vm:WallListViewModel>
