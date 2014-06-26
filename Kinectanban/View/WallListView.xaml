@@ -3,6 +3,7 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:k="http://schemas.microsoft.com/kinect/2013"
              mc:Ignorable="d" 
              d:DesignHeight="400" d:DesignWidth="400">
     <Grid d:DataContext="{d:DesignData Source=/SampleData/SampleWallListViewModel.xaml}">
@@ -10,19 +11,23 @@
             <RowDefinition Height="75" />
             <RowDefinition Height="*"/>
         </Grid.RowDefinitions>
-        <ListBox Grid.Row="1" ItemsSource="{Binding Path=Walls}" ScrollViewer.VerticalScrollBarVisibility="Disabled">
-            <ListBox.ItemsPanel>
-                <ItemsPanelTemplate>
-                    <WrapPanel Orientation="Vertical"/>
-                </ItemsPanelTemplate>
-            </ListBox.ItemsPanel>
-            <ListBox.ItemTemplate>
-                <DataTemplate>
-                    <Button Margin="10" Padding="10" >
-                        <TextBlock Text="{Binding Path=Name}" Style="{StaticResource TextBlockHeader}"/>
-                    </Button>
-                </DataTemplate>
-            </ListBox.ItemTemplate>
-        </ListBox>
+        <k:KinectScrollViewer Grid.Row="1" HorizontalScrollBarVisibility="Auto" 
+                              VerticalScrollBarVisibility="Disabled" 
+                              ContentMargin="0">
+                <ListBox Grid.Row="0" ItemsSource="{Binding Path=Walls}" ScrollViewer.VerticalScrollBarVisibility="Disabled" ScrollViewer.HorizontalScrollBarVisibility="Disabled">
+                <ListBox.ItemsPanel>
+                    <ItemsPanelTemplate>
+                        <WrapPanel Orientation="Vertical" />
+                    </ItemsPanelTemplate>
+                </ListBox.ItemsPanel>
+                <ListBox.ItemTemplate>
+                    <DataTemplate>
+                        <k:KinectTileButton Background="{StaticResource WallBrush}">
+                            <TextBlock Text="{Binding Path=Name}" Style="{StaticResource TextBlockCard}"/>
+                        </k:KinectTileButton>
+                    </DataTemplate>
+                </ListBox.ItemTemplate>
+            </ListBox>
+        </k:KinectScrollViewer>
     </Grid>
 </UserControl>

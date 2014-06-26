@@ -5,6 +5,7 @@
              Startup="App_Startup">
     <Application.Resources>
         <SolidColorBrush x:Key="FontBrush" Color="White" />
+        <SolidColorBrush x:Key="WallBrush" Color="#f47835" />
         <SolidColorBrush x:Key="BackgroundBrush" Color="#6696B3"/>
         <SolidColorBrush x:Key="DefaultCardBrush" Color="#a200ff" />
         <SolidColorBrush x:Key="DefectCardBrush" Color="#f47835" />
@@ -25,7 +26,19 @@
             <Setter Property="FontSize" Value="48"/>
             <Setter Property="FontWeight" Value="Bold" />
         </Style>
-        
+
+        <Style TargetType="TextBlock" BasedOn="{StaticResource {x:Type TextBlock}}" x:Key="TextBlockCard">
+            <Setter Property="FontSize" Value="30"/>
+            <Setter Property="FontWeight" Value="Bold" />
+            <Setter Property="Padding" Value="4, 0, 0, 0"/>
+            <Setter Property="TextWrapping" Value="Wrap"/>
+            <Setter Property="Effect">
+                <Setter.Value>
+                    <DropShadowEffect ShadowDepth="1.5" BlurRadius="0" Opacity="1" />
+                </Setter.Value>
+            </Setter>
+        </Style>
+
         <Style TargetType="Button">
             <Setter Property="Background" Value="Transparent" />
         </Style>
@@ -34,11 +47,13 @@
             <Setter Property="Background" Value="Transparent" />
         </Style>
 
-        <!--<Style x:Key="KinectTileButton" TargetType="{x:Type k:KinectTileButton}">
+        <!--<Style TargetType="{x:Type k:KinectTileButton}">
             <Setter Property="BorderBrush" Value="DarkGray"/>
-            <Setter Property="BorderThickness" Value="20" />
+            <Setter Property="BorderThickness" Value="1" />
             <Setter Property="Foreground" Value="{StaticResource FontBrush}"/>
-            <Setter Property="Background" Value="Transparent"></Setter>
+            <Setter Property="Background" Value="Transparent"/>
+            <Setter Property="Width" Value="220"/>
+            <Setter Property="Height" Value="220"/>
             <Setter Property="Template">
                 <Setter.Value>
                     <ControlTemplate TargetType="{x:Type k:KinectTileButton}">
@@ -50,17 +65,18 @@
                     </ControlTemplate>
                 </Setter.Value>
             </Setter>
-            <Style.Triggers>
-                <Trigger Property="IsEnabled" Value="False">
-                    <Setter Property="Foreground" Value="LightGray"/>
-                    <Setter Property="BorderBrush" Value="LightGray"/>
-                </Trigger>
-                --><!--<Trigger Property="IsHandPointerOver" Value="True">
-                    <Setter Property="Background" Value="#5A5B5B"/>
-                    <Setter Property="Foreground" Value="White"/>
-                </Trigger>--><!--
-            </Style.Triggers>
         </Style>-->
+
+        <Style TargetType="{x:Type k:KinectTileButton}">
+            <Setter Property="BorderBrush" Value="DarkGray"/>
+            <Setter Property="BorderThickness" Value="1" />
+            <Setter Property="Foreground" Value="{StaticResource FontBrush}"/>
+            <Setter Property="Background" Value="{StaticResource DefaultCardBrush}"/>
+        </Style>
+
+        <Style x:Key="ToolstripButton" TargetType="{x:Type k:KinectTileButton}" BasedOn="{StaticResource {x:Type k:KinectTileButton}}">
+            <Setter Property="Background" Value="Transparent"/>
+        </Style>
 
         <PathGeometry x:Key="ChevronGeometry">
             F1M150.001,146.9932L126.565,169.3822L126.565,153.5962L150.001,130.6182L173.435,153.5962L173.435,169.3822z
