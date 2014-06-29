@@ -69,7 +69,7 @@ namespace Kinectanban.Tests.Services
             IMainWindowViewModel mainViewModel = new MainWindowViewModel();
             NavigationService service = CreateTestInstance(mainViewModel);
             service.Initialise();
-            service.SelectWall("wall1");
+            service.SelectWall(new WallSummary());
 
             service.GoBack();
 
@@ -82,7 +82,7 @@ namespace Kinectanban.Tests.Services
             IMainWindowViewModel mainViewModel = new MainWindowViewModel();
             NavigationService service = CreateTestInstance(mainViewModel);
             service.Initialise();
-            service.SelectWall("wall1");
+            service.SelectWall(new WallSummary());
             var originalData = mainViewModel.SelectedData;
             service.SelectCard(new CardViewModel());
 
@@ -98,10 +98,10 @@ namespace Kinectanban.Tests.Services
             IMainWindowViewModel mainViewModel = new MainWindowViewModel();
             NavigationService service = CreateTestInstance(mainViewModel);
             service.Initialise();
-            service.SelectWall("wall1");
+            service.SelectWall(new WallSummary());
             service.SelectCard(new CardViewModel());
 
-            service.SelectWall("wall1");
+            service.SelectWall(new WallSummary());
         }
     
         [Test(), ExpectedException(typeof(InvalidStateException))]
@@ -111,9 +111,9 @@ namespace Kinectanban.Tests.Services
             mainViewModel.SelectedData = new WallViewModel();
             NavigationService service = CreateTestInstance(mainViewModel);
             service.Initialise();
-            service.SelectWall("wall1");
+            service.SelectWall(new WallSummary());
 
-            service.SelectWall("wall2");
+            service.SelectWall(new WallSummary());
         }
 
         [Test()]
@@ -124,7 +124,7 @@ namespace Kinectanban.Tests.Services
             NavigationService service = CreateTestInstance(mainViewModel);
             service.Initialise();
 
-            service.SelectWall("wall1");
+            service.SelectWall(new WallSummary());
 
             Assert.IsInstanceOf<WallViewModel>(mainViewModel.SelectedData);
         }
@@ -146,7 +146,7 @@ namespace Kinectanban.Tests.Services
             mainViewModel.SelectedData = new WallViewModel();
             NavigationService service = CreateTestInstance(mainViewModel);
             service.Initialise();
-            service.SelectWall("wall1");
+            service.SelectWall(new WallSummary());
             service.SelectCard(new CardViewModel());
 
             service.SelectCard(new CardViewModel());
@@ -159,7 +159,7 @@ namespace Kinectanban.Tests.Services
             mainViewModel.SelectedData = new WallViewModel();
             NavigationService service = CreateTestInstance(mainViewModel);
             service.Initialise();
-            service.SelectWall("wall1");
+            service.SelectWall(new WallSummary());
 
             service.SelectCard(new CardViewModel());
 

@@ -26,7 +26,7 @@ namespace Kinectanban.Services
             return new WallListViewModel() { Walls = wallList.Data };
         }
 
-        public WallViewModel GetWall(string wallName)
+        public WallViewModel GetWall(string wallId)
         {
             throw new NotImplementedException();
         }

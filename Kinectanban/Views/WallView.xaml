@@ -4,6 +4,7 @@
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              xmlns:k="http://schemas.microsoft.com/kinect/2013"
+             xmlns:lc="clr-namespace:Kinectanban.Command"
              mc:Ignorable="d" 
              d:DesignHeight="900" d:DesignWidth="1600">
     <Grid d:DataContext="{d:DesignData Source=/SampleData/SampleWallViewModel.xaml}">
@@ -35,7 +36,9 @@
                                                         HorizontalAlignment="Stretch" 
                                                         VerticalContentAlignment="Stretch" 
                                                         HorizontalContentAlignment="Stretch"
-                                                        Width="Auto" Height="180">
+                                                        Width="Auto" Height="180"
+                                                        Command="{x:Static lc:CommandList.SelectCardCommand}"
+                                                        CommandParameter="{Binding .}">
                                         <Grid VerticalAlignment="Stretch" HorizontalAlignment="Stretch">
                                             <Grid.RowDefinitions>
                                                 <RowDefinition Height="*" />
@@ -51,8 +54,10 @@
                                                     <ColumnDefinition />
                                                     <ColumnDefinition />
                                                 </Grid.ColumnDefinitions>
-                                                <TextBlock Grid.Column="0" TextAlignment="Left" TextTrimming="CharacterEllipsis" Foreground="{StaticResource CardLabelForegroundBrush}" Text="{Binding Card.AssignedTo}" />
-                                                <TextBlock Grid.Column="1" TextAlignment="Right" TextTrimming="CharacterEllipsis" Foreground="{StaticResource CardLabelForegroundBrush}" Text="{Binding Card.Estimate}" />
+                                                <TextBlock Grid.Column="0" TextAlignment="Left" TextTrimming="CharacterEllipsis" Foreground="{StaticResource CardLabelForegroundBrush}" 
+                                                           Text="{Binding Card.AssignedTo}" Padding="5,0,5,0"/>
+                                                <TextBlock Grid.Column="1" TextAlignment="Right" TextTrimming="CharacterEllipsis" Foreground="{StaticResource CardLabelForegroundBrush}" 
+                                                           Text="{Binding Card.Estimate}" Padding="5,0,5,0"/>
                                             </Grid>
                                         </Grid>
                                     </k:KinectTileButton>

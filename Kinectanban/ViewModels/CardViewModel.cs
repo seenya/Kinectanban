@@ -11,21 +11,22 @@ namespace Kinectanban.ViewModels
 {
     public class CardViewModel : ViewModelBase
     {
-        private IResourceService _resourceService;
         // For design time support only
         public CardViewModel()
         { }
 
-        public CardViewModel(IResourceService resourceService)
+        public CardViewModel(CardModel card, Brush background)
         {
-            _resourceService = resourceService;
+            _card = card;
+            _background = background;
         }
 
+        private Brush _background;
         public Brush Background 
         { 
             get 
-            { 
-                return _resourceService.GetBrushForCard(_card); 
+            {
+                return _background;
             } 
         }
 
@@ -35,11 +36,6 @@ namespace Kinectanban.ViewModels
             get
             {
                 return _card;
-            }
-            set
-            {
-                _card = value;
-                RaisePropertyChanged("Card");
             }
         }
 

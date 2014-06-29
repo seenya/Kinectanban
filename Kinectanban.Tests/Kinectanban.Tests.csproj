@@ -51,6 +51,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Services\Builders\WallViewModelBuilderTests.cs" />
     <Compile Include="Services\NavigationServiceTests.cs" />
     <Compile Include="Services\ResourceServiceTests.cs" />
   </ItemGroup>

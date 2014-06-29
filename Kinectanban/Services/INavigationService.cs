@@ -1,4 +1,5 @@
-﻿using Kinectanban.ViewModels;
+﻿using Kinectanban.Models;
+using Kinectanban.ViewModels;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -11,7 +12,7 @@ namespace Kinectanban.Services
     {
         void GoBack();
         void Initialise();
-        void SelectWall(string wallId);
+        void SelectWall(WallSummary wall);
         void SelectCard(CardViewModel card);
     }
 }

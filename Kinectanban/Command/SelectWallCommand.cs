@@ -1,4 +1,5 @@
-﻿using Kinectanban.Services;
+﻿using Kinectanban.Models;
+using Kinectanban.Services;
 using Kinectanban.ViewModels;
 using System;
 using System.Collections.Generic;
@@ -31,8 +32,8 @@ namespace Kinectanban.Command
 
         public void Execute(object parameter)
         {
-            string wallId = (string)parameter;
-            _navigationService.SelectWall(wallId);
+            WallSummary wall = (WallSummary)parameter;
+            _navigationService.SelectWall(wall);
         }        
     }
 }

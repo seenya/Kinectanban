@@ -1,4 +1,5 @@
 ﻿using Kinectanban.Exceptions;
+using Kinectanban.Models;
 using Kinectanban.ViewModels;
 using System;
 using System.Collections.Generic;
@@ -51,11 +52,11 @@ namespace Kinectanban.Services
             }
         }
 
-        public void SelectWall(string wallId)
+        public void SelectWall(WallSummary wall)
         {
             if (_selectedWall != null)
                 throw new InvalidStateException("A wall is already selected");
-            _selectedWall = _wallService.GetWall(wallId); 
+            _selectedWall = _wallService.GetWall(wall.ID); 
             _mainWindowViewModel.SelectedData = _selectedWall;
         }
 
