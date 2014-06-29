@@ -5,7 +5,7 @@
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              xmlns:k="http://schemas.microsoft.com/kinect/2013"
              mc:Ignorable="d" 
-             d:DesignHeight="800" d:DesignWidth="600">
+             d:DesignHeight="900" d:DesignWidth="1600">
     <Grid d:DataContext="{d:DesignData Source=/SampleData/SampleWallViewModel.xaml}">
         <ListBox ItemsSource="{Binding Path=Lists}" ScrollViewer.VerticalScrollBarVisibility="Disabled" ScrollViewer.HorizontalScrollBarVisibility="Disabled" VerticalContentAlignment="Stretch" HorizontalContentAlignment="Stretch">
             <ListBox.ItemsPanel>
@@ -21,7 +21,9 @@
                             <RowDefinition Height="*" />
                         </Grid.RowDefinitions>
                         <Image Source="{Binding Icon}" Grid.Row="0" />
-                        <ListBox ItemsSource="{Binding Cards}" Grid.Row="1" ScrollViewer.HorizontalScrollBarVisibility="Disabled" ScrollViewer.VerticalScrollBarVisibility="Auto">
+                        <ListBox ItemsSource="{Binding Cards}" Grid.Row="1" 
+                                 ScrollViewer.HorizontalScrollBarVisibility="Disabled" 
+                                 ScrollViewer.VerticalScrollBarVisibility="Auto">
                             <ListBox.ItemsPanel>
                                 <ItemsPanelTemplate>
                                     <StackPanel Orientation="Vertical" />
@@ -29,8 +31,30 @@
                             </ListBox.ItemsPanel>                            
                             <ListBox.ItemTemplate>
                                 <DataTemplate>
-                                    <k:KinectTileButton Background="{Binding Background}">
-                                        <TextBlock Text="{Binding Path=Card.Title}" Style="{StaticResource TextBlockCard}"/>
+                                    <k:KinectTileButton Background="{Binding Background}" 
+                                                        HorizontalAlignment="Stretch" 
+                                                        VerticalContentAlignment="Stretch" 
+                                                        HorizontalContentAlignment="Stretch"
+                                                        Width="Auto" Height="180">
+                                        <Grid VerticalAlignment="Stretch" HorizontalAlignment="Stretch">
+                                            <Grid.RowDefinitions>
+                                                <RowDefinition Height="*" />
+                                                <RowDefinition Height="55" />
+                                            </Grid.RowDefinitions>
+                                            <TextBlock Grid.Row="0" Text="{Binding Path=Card.Title}" 
+                                                       TextTrimming="CharacterEllipsis"
+                                                       TextWrapping="Wrap"
+                                                       Style="{StaticResource TextBlockCard}"
+                                                       Margin="5"/>
+                                            <Grid Grid.Row="1" Background="{StaticResource CardLabelBackgroundBrush}">
+                                                <Grid.ColumnDefinitions>
+                                                    <ColumnDefinition />
+                                                    <ColumnDefinition />
+                                                </Grid.ColumnDefinitions>
+                                                <TextBlock Grid.Column="0" TextAlignment="Left" TextTrimming="CharacterEllipsis" Foreground="{StaticResource CardLabelForegroundBrush}" Text="{Binding Card.AssignedTo}" />
+                                                <TextBlock Grid.Column="1" TextAlignment="Right" TextTrimming="CharacterEllipsis" Foreground="{StaticResource CardLabelForegroundBrush}" Text="{Binding Card.Estimate}" />
+                                            </Grid>
+                                        </Grid>
                                     </k:KinectTileButton>
                                 </DataTemplate>
                             </ListBox.ItemTemplate>

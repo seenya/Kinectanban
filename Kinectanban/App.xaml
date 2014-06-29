@@ -11,6 +11,8 @@
         <SolidColorBrush x:Key="DefectCardBrush" Color="#f47835" />
         <SolidColorBrush x:Key="ReadyBrush" Color="#8ec127" />
         <SolidColorBrush x:Key="BlockedBrush" Color="#d41243" />
+        <SolidColorBrush x:Key="CardLabelBackgroundBrush" Color="#FFFFFF" />
+        <SolidColorBrush x:Key="CardLabelForegroundBrush" Color="#5B5B5B" />
 
         <Style  TargetType="Grid">
             <Setter Property="Background" Value="{StaticResource BackgroundBrush}" />
@@ -45,27 +47,10 @@
 
         <Style TargetType="ListBox">
             <Setter Property="Background" Value="Transparent" />
+            <Setter Property="VerticalContentAlignment" Value="Stretch" />
+            <Setter Property="HorizontalContentAlignment" Value="Stretch" />
+            <Setter Property="BorderThickness" Value="0" />
         </Style>
-
-        <!--<Style TargetType="{x:Type k:KinectTileButton}">
-            <Setter Property="BorderBrush" Value="DarkGray"/>
-            <Setter Property="BorderThickness" Value="1" />
-            <Setter Property="Foreground" Value="{StaticResource FontBrush}"/>
-            <Setter Property="Background" Value="Transparent"/>
-            <Setter Property="Width" Value="220"/>
-            <Setter Property="Height" Value="220"/>
-            <Setter Property="Template">
-                <Setter.Value>
-                    <ControlTemplate TargetType="{x:Type k:KinectTileButton}">
-                        <Grid HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Background="{TemplateBinding Background}" Width="{TemplateBinding Width}" Height="{TemplateBinding Height}">
-                            <Border BorderThickness="{TemplateBinding BorderThickness}" BorderBrush="{TemplateBinding BorderBrush}">
-                                <ContentPresenter HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Content="{TemplateBinding Content}"></ContentPresenter>
-                            </Border>
-                        </Grid>
-                    </ControlTemplate>
-                </Setter.Value>
-            </Setter>
-        </Style>-->
 
         <Style TargetType="{x:Type k:KinectTileButton}">
             <Setter Property="BorderBrush" Value="DarkGray"/>
