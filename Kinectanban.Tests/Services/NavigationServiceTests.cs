@@ -1,8 +1,8 @@
 ﻿using Kinectanban.Command;
 using Kinectanban.Exceptions;
-using Kinectanban.Model;
-using Kinectanban.Service;
-using Kinectanban.ViewModel;
+using Kinectanban.Models;
+using Kinectanban.Services;
+using Kinectanban.ViewModels;
 using Moq;
 using NUnit.Framework;
 using System;

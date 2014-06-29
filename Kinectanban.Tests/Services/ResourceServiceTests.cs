@@ -5,9 +5,9 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using Kinectanban.Service;
-using Kinectanban.Service.Wrapper;
-using Kinectanban.Model;
+using Kinectanban.Services;
+using Kinectanban.Services.Wrappers;
+using Kinectanban.Models;
 
 namespace Kinectanban.Tests.Services
 {

@@ -14,23 +14,22 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 
-namespace Kinectanban
+namespace Kinectanban.Views
 {
     /// <summary>
-    /// Interaction logic for MainWindow.xaml
+    /// Interaction logic for CardView.xaml
     /// </summary>
-    public partial class MainWindow : Window
+    public partial class CardView : UserControl
     {
-        protected MainWindow()
+
+        public CardView()
         {
             InitializeComponent();
         }
 
-        public MainWindow(MainWindowViewModel vm) 
+        public CardView(CardViewModel viewModel)
         {
-            InitializeComponent();
-            DataContext = vm;
+            DataContext = viewModel;
         }
-
     }
 }

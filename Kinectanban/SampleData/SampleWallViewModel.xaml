@@ -1,0 +1,101 @@
+﻿<vm:WallViewModel
+    xmlns:m="clr-namespace:Kinectanban.Models"
+    xmlns:vm="clr-namespace:Kinectanban.ViewModels"
+    xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:sys="clr-namespace:System;assembly=mscorlib" Name="Wall1" ID="W001">
+    <vm:WallViewModel.Lists>
+        <vm:ListViewModel Name="Backlog" Icon="../Images/backlog.png">
+            <vm:ListViewModel.Cards>
+                <vm:CardViewModel Background="#a200ff">
+                    <vm:CardViewModel.Card>
+                        <m:CardModel
+                            Id="US007"
+                            Title="The title you have chosen"
+                            AssignedTo="James Bond" 
+                            Estimate="8"
+                            Type="Story" />
+                    </vm:CardViewModel.Card>
+                </vm:CardViewModel>
+                <vm:CardViewModel Background="#f47835">
+                    <vm:CardViewModel.Card>
+                        <m:CardModel
+                            Id="D008"
+                            Title="Don't make mistakes"
+                            AssignedTo="Chuck Norris" 
+                            Estimate="1"
+                            Type="Defect" />
+                    </vm:CardViewModel.Card>
+                </vm:CardViewModel>
+                <vm:CardViewModel Background="#a200ff">
+                    <vm:CardViewModel.Card>
+                        <m:CardModel
+                            Id="US011"
+                            Title="Awesome story"
+                            AssignedTo="Bourne" 
+                            Estimate="13"
+                            Type="Story"/>
+                    </vm:CardViewModel.Card>
+                </vm:CardViewModel>
+            </vm:ListViewModel.Cards>
+        </vm:ListViewModel>
+        <vm:ListViewModel Name="In Analysis" Icon="../Images/in analysis.png">
+            <vm:ListViewModel.Cards>
+                <vm:CardViewModel Background="#f47835">
+                    <vm:CardViewModel.Card>
+                        <m:CardModel
+                            Id="D007"
+                            Title="Make it better"
+                            AssignedTo="MacGyver" 
+                            Estimate="1"
+                            Type="Defect" />
+                    </vm:CardViewModel.Card>
+                </vm:CardViewModel>
+                <vm:CardViewModel Background="#8ec127">
+                    <vm:CardViewModel.Card>
+                        <m:CardModel
+                            Id="US008"
+                            Title="The title you have chosen2"
+                            AssignedTo="M" 
+                            Estimate="3"
+                            Type="Story" 
+                            IsReady="True"/>
+                    </vm:CardViewModel.Card>
+                </vm:CardViewModel>
+            </vm:ListViewModel.Cards>
+        </vm:ListViewModel>
+        <vm:ListViewModel Name="In Dev" Icon="../Images/in dev.png">
+            <vm:ListViewModel.Cards>
+                <vm:CardViewModel Background="#d41243">
+                    <vm:CardViewModel.Card>
+                        <m:CardModel
+                            Id="US012"
+                            Title="Funky Story"
+                            AssignedTo="Marley" 
+                            Estimate="20"
+                            Type="Story"
+                            IsBlocked="True"/>
+                    </vm:CardViewModel.Card>
+                </vm:CardViewModel>
+            </vm:ListViewModel.Cards>
+        </vm:ListViewModel>
+        <vm:ListViewModel Name="In QA" Icon="../Images/in qa.png">
+        </vm:ListViewModel>
+        <vm:ListViewModel Name="Showcase" Icon="../Images/showcase.png">
+            <vm:ListViewModel.Cards>
+                <vm:CardViewModel Background="#a200ff">
+                    <vm:CardViewModel.Card>
+                        <m:CardModel
+                            Id="US099"
+                            Title="Too easy"
+                            AssignedTo="MacGyver" 
+                            Estimate="1"
+                            Type="Story"/>
+                    </vm:CardViewModel.Card>
+                </vm:CardViewModel>
+            </vm:ListViewModel.Cards>
+        </vm:ListViewModel>
+        <vm:ListViewModel Name="Done" Icon="../Images/done.png">
+        </vm:ListViewModel>
+    </vm:WallViewModel.Lists>
+</vm:WallViewModel>

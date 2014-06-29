@@ -1,5 +1,5 @@
-﻿using Kinectanban.Service;
-using Kinectanban.ViewModel;
+﻿using Kinectanban.Services;
+using Kinectanban.ViewModels;
 using System;
 using System.Collections.Generic;
 using System.Linq;

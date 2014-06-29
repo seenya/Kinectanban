@@ -1,6 +1,6 @@
 ﻿using Kinectanban.Command;
-using Kinectanban.Service;
-using Kinectanban.ViewModel;
+using Kinectanban.Services;
+using Kinectanban.ViewModels;
 using Microsoft.Practices.Unity;
 using RestSharp;
 using System;
