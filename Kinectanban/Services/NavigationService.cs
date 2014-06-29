@@ -43,7 +43,7 @@ namespace Kinectanban.Services
             if(_mainWindowViewModel.SelectedData is WallViewModel)
             {
                 _selectedWall = null;
-                _mainWindowViewModel.SelectedData = new WallListViewModel();
+                _mainWindowViewModel.SelectedData = GetNewWallListViewModel();
             }
             else if(_mainWindowViewModel.SelectedData is CardViewModel)
             {

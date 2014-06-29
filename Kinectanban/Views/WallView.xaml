@@ -32,14 +32,13 @@
                             </ListBox.ItemsPanel>                            
                             <ListBox.ItemTemplate>
                                 <DataTemplate>
-                                    <k:KinectTileButton Background="{Binding Background}" 
-                                                        HorizontalAlignment="Stretch" 
+                                    <k:KinectTileButton HorizontalAlignment="Stretch" 
                                                         VerticalContentAlignment="Stretch" 
                                                         HorizontalContentAlignment="Stretch"
                                                         Width="Auto" Height="180"
                                                         Command="{x:Static lc:CommandList.SelectCardCommand}"
                                                         CommandParameter="{Binding .}">
-                                        <Grid VerticalAlignment="Stretch" HorizontalAlignment="Stretch">
+                                        <Grid VerticalAlignment="Stretch" HorizontalAlignment="Stretch" Background="{Binding Background}" >
                                             <Grid.RowDefinitions>
                                                 <RowDefinition Height="*" />
                                                 <RowDefinition Height="55" />

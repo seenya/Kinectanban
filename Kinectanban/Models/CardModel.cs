@@ -17,6 +17,6 @@ namespace Kinectanban.Models
         public bool IsReady { get; set; }
         public bool IsBlocked { get; set; }
         public string Estimate { get; set; }
-        public CustomAttributeModel[] ImportantAttributes { get; set; }
+        public IList<CustomAttributeModel> ImportantAttributes { get; set; }
     }
 }

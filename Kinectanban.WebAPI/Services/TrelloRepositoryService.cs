@@ -20,7 +20,7 @@ namespace Kinectanban.WebAPI.Services
         }
 
 
-        public List<TrelloBoardSummary> GetBoards()
+        public IList<TrelloBoardSummary> GetBoards()
         {
             var request = new RestRequest(GetRequestURL("/1/members/seenya/boards"), Method.GET);
             var wallList = _client.Execute<List<TrelloBoardSummary>>(request);

@@ -9,6 +9,6 @@ namespace Kinectanban.Models
     public class ListModel
     {
         public string Name { get; set; }
-        public CardModel[] Cards { get; set; }
+        public List<CardModel> Cards { get; set; }
     }
 }

@@ -15,7 +15,6 @@ namespace Kinectanban.WebAPI
         {
             AreaRegistration.RegisterAllAreas();
             UnityConfig.RegisterComponents();
-            //Bootstrapper.Initialise();             
             GlobalConfiguration.Configure(WebApiConfig.Register);
             FilterConfig.RegisterGlobalFilters(GlobalFilters.Filters);
             RouteConfig.RegisterRoutes(RouteTable.Routes);

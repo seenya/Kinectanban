@@ -1,4 +1,5 @@
-﻿using Kinectanban.ViewModels;
+﻿using Kinectanban.Models;
+using Kinectanban.ViewModels;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -32,8 +33,9 @@ namespace Kinectanban.Services.Builders
 
         private ListViewModel[] BuildListViewModels(Models.WallModel wall)
         {
-            ListViewModel[] lvm = new ListViewModel[wall.Lists.Length];
-            for (int i = 0; i < wall.Lists.Length; i++)
+            int listCount = (wall.Lists == null) ? 0 : wall.Lists.Count;
+            ListViewModel[] lvm = new ListViewModel[listCount];
+            for (int i = 0; i < listCount; i++)
             {
                 lvm[i] = BuildListViewModel(wall.Lists[i]);
             }
@@ -55,10 +57,11 @@ namespace Kinectanban.Services.Builders
                 return null;
         }
 
-        private CardViewModel[] BuildCardViewModels(Models.CardModel[] cards)
+        private CardViewModel[] BuildCardViewModels(IList<CardModel> cards)
         {
-            CardViewModel[] cvm = new CardViewModel[cards.Length];
-            for (int i = 0; i < cards.Length; i++)
+            int cardCount = (cards == null)? 0 : cards.Count;
+            CardViewModel[] cvm = new CardViewModel[cardCount];
+            for (int i = 0; i < cardCount; i++)
             {
                 cvm[i] = BuildCardViewModel(cards[i]);
             }

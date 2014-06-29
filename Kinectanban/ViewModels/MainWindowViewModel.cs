@@ -6,8 +6,20 @@ using System.Threading.Tasks;
 
 namespace Kinectanban.ViewModels
 {
-    public class MainWindowViewModel : IMainWindowViewModel
+    public class MainWindowViewModel : ViewModelBase, IMainWindowViewModel
     {
-        public ViewModelBase SelectedData { get; set; }
+        private ViewModelBase _selectedData;
+        public ViewModelBase SelectedData
+        {
+            get
+            {
+                return _selectedData;
+            }
+            set
+            {
+                _selectedData = value;
+                RaisePropertyChanged("SelectedData");
+            }
+        }
     }
 }

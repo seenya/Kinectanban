@@ -10,6 +10,6 @@ namespace Kinectanban.Models
     {
         public string ID { get; set; }
         public string Name { get; set; }
-        public ListModel[] Lists { get; set; }
+        public List<ListModel> Lists { get; set; }
     }
 }

@@ -36,13 +36,16 @@ namespace Kinectanban.WebAPI.Controllers
         public Wall Get(string id)
         {
 
-            var theLists = new List<string>();
-            theLists.Add("List1");
-            theLists.Add("List2");
+            var theLists = new List<CardList>();
+            var list1 = new CardList() { Name = "In Dev" };
+            var list2 = new CardList() { Name = "In QA" };
+            theLists.Add(list1);
+            theLists.Add(list2);
             var theCards = new List<Card>();
-            theCards.Add(new Card() { id = "US086", Title = "Title1", Description = "Description that is long 1.", AssignedTo = "Agent 86", AssignedList="List1" });
-            theCards.Add(new Card() { id = "US099", Title = "Title2", Description = "Description that is long 2.", AssignedTo = "Agent 99" , AssignedList="List2"});
-            return new Wall() { Id = id, Lists = theLists, Cards = theCards };
+            theCards.Add(new Card() { Id = "US086", Title = "Title1", Detail = "Description that is long 1.", AssignedTo = "Agent 86"});
+            theCards.Add(new Card() { Id = "US099", Title = "Title2", Detail = "Description that is long 2.", AssignedTo = "Agent 99"});
+            list1.Cards = theCards.ToArray();
+            return new Wall() { ID = id, Lists = theLists.ToArray() };
         }
     }
 }

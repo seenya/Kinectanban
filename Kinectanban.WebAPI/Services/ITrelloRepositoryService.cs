@@ -9,7 +9,7 @@ namespace Kinectanban.WebAPI.Services
 {
     public interface ITrelloRepositoryService
     {
-        List<TrelloBoardSummary> GetBoards();
+        IList<TrelloBoardSummary> GetBoards();
         TrelloBoard GetBoard(string id);
     }
 }

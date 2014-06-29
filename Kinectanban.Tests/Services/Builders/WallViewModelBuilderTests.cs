@@ -20,13 +20,19 @@ namespace Kinectanban.Tests.Services.Builders
         public void BuildViewModel_2Lists2CardsInOne3CardsInTheOther_BuiltWith2Lists2Cards()
         {
             ListModel list1 = new ListModel() { Name="list1" };
-            list1.Cards = new CardModel[] {CreateStoryCard(), CreateStoryCard()};
+            var cards1 = new List<CardModel>();
+            cards1.Add(CreateStoryCard());
+            cards1.Add(CreateStoryCard());
+            list1.Cards = cards1;
             ListModel list2 = new ListModel() { Name = "list2" };
-            list2.Cards = new CardModel[] { CreateStoryCard(), CreateStoryCard(), CreateStoryCard() };
+            var cards2 = new List<CardModel>();
+            cards2.Add(CreateStoryCard());
+            cards2.Add(CreateStoryCard());
+            list2.Cards = cards2;
             List<ListModel> theLists = new List<ListModel>();
             theLists.Add(list1);
             theLists.Add(list2);            
-            WallModel wall = new WallModel() { ID="ID1", Name="SpecialWall", Lists=theLists.ToArray() };
+            WallModel wall = new WallModel() { ID="ID1", Name="SpecialWall", Lists=theLists };
 
             var builder = CreateBuilder();
 

@@ -136,6 +136,7 @@
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\UnityConfig.cs" />
     <Compile Include="App_Start\WebApiConfig.cs" />
+    <Compile Include="Models\CardList.cs" />
     <Compile Include="Models\Trello\TrelloBoard.cs" />
     <Compile Include="Models\Trello\TrelloBoardSummary.cs" />
     <Compile Include="Models\Trello\TrelloCard.cs" />
