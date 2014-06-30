@@ -13,7 +13,7 @@ namespace Kinectanban.Models
         public string Title { get; set; }
         public string Detail { get; set; }
         public string AssignedTo { get; set; }
-        public string Type { get; set; }
+        public bool IsDefect { get; set; }
         public bool IsReady { get; set; }
         public bool IsBlocked { get; set; }
         public string Estimate { get; set; }

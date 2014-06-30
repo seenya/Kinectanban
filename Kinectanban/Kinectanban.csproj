@@ -91,13 +91,9 @@
     <Compile Include="Services\Builders\WallViewModelBuilder.cs" />
     <Compile Include="Services\Constants.cs" />
     <Compile Include="Services\INavigationService.cs" />
-    <Compile Include="Services\IResourceService.cs" />
     <Compile Include="Services\IWallService.cs" />
     <Compile Include="Services\NavigationService.cs" />
-    <Compile Include="Services\ResourceService.cs" />
     <Compile Include="Services\WallService.cs" />
-    <Compile Include="Services\Wrappers\IResourceSupplier.cs" />
-    <Compile Include="Services\Wrappers\ResourceSupplier.cs" />
     <Compile Include="ViewModels\CardViewModel.cs" />
     <Compile Include="ViewModels\IMainWindowViewModel.cs" />
     <Compile Include="ViewModels\MainWindowViewModel.cs" />

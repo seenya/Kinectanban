@@ -1,6 +1,5 @@
 ﻿using Kinectanban.Command;
 using Kinectanban.Services;
-using Kinectanban.Services.Wrappers;
 using Kinectanban.ViewModels;
 using Microsoft.Practices.Unity;
 using RestSharp;
@@ -34,7 +33,6 @@ namespace Kinectanban
 
                 string wallServiceBaseUri = ConfigurationManager.AppSettings["WallServiceBaseUri"];
                 IRestClient client = container.Resolve<IRestClient>(new ParameterOverride("baseUrl", wallServiceBaseUri));
-                IResourceSupplier supplier = container.Resolve<IResourceSupplier>(new ParameterOverride("application", this));
                 
                 CommandList.BackCommand = container.Resolve<BackCommand>();
                 CommandList.ExitCommand = container.Resolve<ExitCommand>();

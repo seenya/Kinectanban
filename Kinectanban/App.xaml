@@ -62,6 +62,21 @@
         <Style x:Key="ToolstripButton" TargetType="{x:Type k:KinectTileButton}" BasedOn="{StaticResource {x:Type k:KinectTileButton}}">
             <Setter Property="Background" Value="Transparent"/>
         </Style>
+        
+        <Style TargetType="Grid" x:Key="CardBackgroundColour">
+            <Setter Property="Background" Value="{StaticResource DefaultCardBrush}" />
+            <Style.Triggers>
+                <DataTrigger Binding="{Binding Path=Card.IsDefect}" Value="True">
+                    <Setter Property="Background" Value="{StaticResource DefectCardBrush}" />
+                </DataTrigger>
+                <DataTrigger Binding="{Binding Path=Card.IsBlocked}" Value="True">
+                    <Setter Property="Background" Value="{StaticResource BlockedBrush}" />
+                </DataTrigger>
+                <DataTrigger Binding="{Binding Path=Card.IsReady}" Value="True">
+                    <Setter Property="Background" Value="{StaticResource ReadyBrush}" />
+                </DataTrigger>
+            </Style.Triggers>
+        </Style>
 
         <PathGeometry x:Key="ChevronGeometry">
             F1M150.001,146.9932L126.565,169.3822L126.565,153.5962L150.001,130.6182L173.435,153.5962L173.435,169.3822z

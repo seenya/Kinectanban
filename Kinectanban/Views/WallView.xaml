@@ -38,7 +38,7 @@
                                                         Width="Auto" Height="180"
                                                         Command="{x:Static lc:CommandList.SelectCardCommand}"
                                                         CommandParameter="{Binding .}">
-                                        <Grid VerticalAlignment="Stretch" HorizontalAlignment="Stretch" Background="{Binding Background}" >
+                                        <Grid VerticalAlignment="Stretch" HorizontalAlignment="Stretch" Style="{StaticResource ResourceKey=CardBackgroundColour}" >
                                             <Grid.RowDefinitions>
                                                 <RowDefinition Height="*" />
                                                 <RowDefinition Height="55" />
@@ -50,7 +50,7 @@
                                                        Margin="5"/>
                                             <Grid Grid.Row="1" Background="{StaticResource CardLabelBackgroundBrush}">
                                                 <Grid.ColumnDefinitions>
-                                                    <ColumnDefinition />
+                                                    <ColumnDefinition Width="Auto"/>
                                                     <ColumnDefinition />
                                                 </Grid.ColumnDefinitions>
                                                 <TextBlock Grid.Column="0" TextAlignment="Left" TextTrimming="CharacterEllipsis" Foreground="{StaticResource CardLabelForegroundBrush}" 

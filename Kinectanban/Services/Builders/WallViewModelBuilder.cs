@@ -13,16 +13,10 @@ namespace Kinectanban.Services.Builders
 {
     public class WallViewModelBuilder
     {
-        private IResourceService _resourceService;
-
-        public WallViewModelBuilder(IResourceService resourceService)
-        {
-            _resourceService = resourceService;
-        }
 
         public CardViewModel BuildCardViewModel(Models.CardModel card)
         {
-            return new CardViewModel(card, _resourceService.GetBrushForCard(card));
+            return new CardViewModel(card);
         }
 
         public WallViewModel BuildWallViewModel(Models.WallModel wall)

@@ -1,7 +1,6 @@
 ﻿using Kinectanban.Models;
 using Kinectanban.Services;
 using Kinectanban.Services.Builders;
-using Kinectanban.Services.Wrappers;
 using Kinectanban.ViewModels;
 using Moq;
 using NUnit.Framework;
@@ -46,30 +45,15 @@ namespace Kinectanban.Tests.Services.Builders
             Assert.AreEqual(3, vm.Lists[1].Cards.Length);
         }
 
-        [Test()]
-        public void BuildCardViewModel_TypeIsStory_BackgroundIsSet()
-        {
-            CardModel card = CreateStoryCard();
-
-            WallViewModelBuilder builder = CreateBuilder();
-
-            CardViewModel vm = builder.BuildCardViewModel(card);
-
-            Assert.IsNotNull(vm.Background);
-            Assert.AreSame(card, vm.Card);
-        }
-
         private static CardModel CreateStoryCard()
         {
-            CardModel card = new CardModel() { Id = "US001", Title = "The story", IsBlocked = false, IsReady = false, Type = "Story" };
+            CardModel card = new CardModel() { Id = "US001", Title = "The story", IsBlocked = false, IsReady = false, IsDefect=false };
             return card;
         }
 
         private WallViewModelBuilder CreateBuilder()
         {
-            var mockResourceService = new Mock<IResourceService>();
-            mockResourceService.Setup(r => r.GetBrushForCard(It.IsAny<CardModel>())).Returns(new SolidColorBrush());
-            return new WallViewModelBuilder(mockResourceService.Object);
+            return new WallViewModelBuilder();
         }
     }
 }

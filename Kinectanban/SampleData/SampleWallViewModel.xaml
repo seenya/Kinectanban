@@ -7,58 +7,57 @@
     <vm:WallViewModel.Lists>
         <vm:ListViewModel Name="Backlog" Icon="../Images/backlog.png">
             <vm:ListViewModel.Cards>
-                <vm:CardViewModel Background="#a200ff">
+                <vm:CardViewModel>
                     <vm:CardViewModel.Card>
                         <m:CardModel
                             Id="US007"
                             Title="The title you have chosen"
                             AssignedTo="James Bond" 
-                            Estimate="8"
-                            Type="Story" />
+                            Estimate="108"
+                            IsDefect="False" />
                     </vm:CardViewModel.Card>
                 </vm:CardViewModel>
-                <vm:CardViewModel Background="#f47835">
+                <vm:CardViewModel>
                     <vm:CardViewModel.Card>
                         <m:CardModel
                             Id="D008"
                             Title="Don't make mistakes"
                             AssignedTo="Chuck Norris" 
                             Estimate="1"
-                            Type="Defect" />
+                            IsDefect="True" />
                     </vm:CardViewModel.Card>
                 </vm:CardViewModel>
-                <vm:CardViewModel Background="#a200ff">
+                <vm:CardViewModel>
                     <vm:CardViewModel.Card>
                         <m:CardModel
                             Id="US011"
                             Title="Awesome story"
                             AssignedTo="Bourne" 
                             Estimate="13"
-                            Type="Story"/>
+                            IsDefect="False" />
                     </vm:CardViewModel.Card>
                 </vm:CardViewModel>
             </vm:ListViewModel.Cards>
         </vm:ListViewModel>
         <vm:ListViewModel Name="In Analysis" Icon="../Images/in analysis.png">
             <vm:ListViewModel.Cards>
-                <vm:CardViewModel Background="#f47835">
+                <vm:CardViewModel>
                     <vm:CardViewModel.Card>
                         <m:CardModel
                             Id="D007"
                             Title="Make it better"
                             AssignedTo="MacGyver" 
                             Estimate="1"
-                            Type="Defect" />
+                            IsDefect="True" />
                     </vm:CardViewModel.Card>
                 </vm:CardViewModel>
-                <vm:CardViewModel Background="#8ec127">
+                <vm:CardViewModel>
                     <vm:CardViewModel.Card>
                         <m:CardModel
                             Id="US008"
                             Title="The title you have chosen2"
                             AssignedTo="M" 
                             Estimate="3"
-                            Type="Story" 
                             IsReady="True"/>
                     </vm:CardViewModel.Card>
                 </vm:CardViewModel>
@@ -66,14 +65,13 @@
         </vm:ListViewModel>
         <vm:ListViewModel Name="In Dev" Icon="../Images/in dev.png">
             <vm:ListViewModel.Cards>
-                <vm:CardViewModel Background="#d41243">
+                <vm:CardViewModel>
                     <vm:CardViewModel.Card>
                         <m:CardModel
                             Id="US012"
                             Title="Funky Story"
                             AssignedTo="Marley" 
                             Estimate="20"
-                            Type="Story"
                             IsBlocked="True"/>
                     </vm:CardViewModel.Card>
                 </vm:CardViewModel>
@@ -83,14 +81,13 @@
         </vm:ListViewModel>
         <vm:ListViewModel Name="Showcase" Icon="../Images/showcase.png">
             <vm:ListViewModel.Cards>
-                <vm:CardViewModel Background="#a200ff">
+                <vm:CardViewModel>
                     <vm:CardViewModel.Card>
                         <m:CardModel
                             Id="US099"
                             Title="Too easy"
                             AssignedTo="MacGyver" 
-                            Estimate="1"
-                            Type="Story"/>
+                            Estimate="1"/>
                     </vm:CardViewModel.Card>
                 </vm:CardViewModel>
             </vm:ListViewModel.Cards>

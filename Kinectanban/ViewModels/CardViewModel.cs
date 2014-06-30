@@ -15,19 +15,9 @@ namespace Kinectanban.ViewModels
         public CardViewModel()
         { }
 
-        public CardViewModel(CardModel card, Brush background)
+        public CardViewModel(CardModel card)
         {
             _card = card;
-            _background = background;
-        }
-
-        private Brush _background;
-        public Brush Background 
-        { 
-            get 
-            {
-                return _background;
-            } 
         }
 
         private CardModel _card;
